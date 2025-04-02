@@ -9,5 +9,6 @@ RUN mkdir -p /workspace/frontend/node_modules && chown -R node:node /workspace
 RUN npm install -g pnpm
 
 USER node
+
 RUN pnpm install
 
