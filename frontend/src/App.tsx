@@ -1,5 +1,6 @@
 import Mediapool from "./feature/Mediapool"
 import Footer from "./feature/Footer"
+import Queue from "./feature/Queue"
 import {useTheme} from "@heroui/use-theme";
 
 function App() {
@@ -9,9 +10,10 @@ function App() {
     <>
     <div className="h-dvh flex flex-col">
 
-      <div className="flex-1 p-3 h-[calc(100%-76px)]">
+      <div className="p-3 gap-x-3 h-[calc(100%-76px)] w-dvh flex flex-row justify-between">
 
         <Mediapool theme={theme}/>
+        <Queue theme={theme}/>
 
       </div>
 
