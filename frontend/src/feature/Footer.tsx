@@ -7,17 +7,17 @@ export default function Themewitcher ({theme,setTheme}:{theme : string,setTheme 
   return (
     <>
     <Card className="w-full flex flex-row  place-content-between">
-      <CardHeader className={`w-fit ${theme === "light"?" bg-blue-400":" bg-violet-400"} ${theme === "light"?"text-[#e5e7eb]":"text-[#18181b]"}`}>
+      <CardHeader className={`w-fit ${theme === "light"?" bg-amber-500":" bg-violet-400"} ${theme === "light"?"text-[#ffffff]":"text-[#18181b]"}`}>
         <h1 className="text-4xl w-fit">META</h1><a className="text-2xl translate-y-1 pr-1">paste</a>
-        <div className={`inline-block rounded-lg px-2 py-0.5 ${theme === "light"?"bg-[#e5e7eb]":"bg-[#18181b]"}`}>
-          <h1 className={`text-3xl w-fit ${theme === "light"?"text-blue-500":"text-purple-600"}`}>GUI</h1>
+        <div className={`inline-block rounded-lg px-2 py-0.5 ${theme === "light"?"bg-[#ffffff]":"bg-[#18181b]"}`}>
+          <h1 className={`text-3xl w-fit ${theme === "light"?"text-orange-500":"text-purple-600"}`}>GUI</h1>
         </div>
       </CardHeader>
       <CardBody className="gap-3 w-fit flex flex-row justify-end">
 
         <ButtonGroup
         variant="bordered"
-        color={theme === "light"?"primary":"secondary"} >
+        color={theme === "light"?"warning":"secondary"} >
           <Button className="w-24" radius="sm" as={Link} href="https://x.com/FFR_FOURFORCE" target="_blank">
             <Twitter />
           </Button>
@@ -31,7 +31,7 @@ export default function Themewitcher ({theme,setTheme}:{theme : string,setTheme 
 
         <Button
           onPress={() => setTheme(theme === "light"? "dark":"light")}
-          color={theme === "light"?"primary":"secondary"}
+          color={theme === "light"?"warning":"secondary"}
           startContent={theme === "light"?<MoonStar/>:<Sun/>}
           variant="bordered"
           className="w-24"

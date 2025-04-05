@@ -16,7 +16,7 @@ export default function Mediapool({theme}:{theme : string}) {
     <>
       {/* メディアプールのボックス */}
       <Card className="max-w-[30vw] h-full pb-1.5">
-      <CardHeader className={`pb-0 pt-2 px-4 flex-col items-start ${theme === "light"?"text-blue-500":"text-purple-600"}`}>
+      <CardHeader className={`pb-0 pt-2 px-4 flex-col items-start ${theme === "light"?"text-orange-400":"text-purple-600"}`}>
         <h3 className="font-bold text-2xl w-full text-center">MEDIA POOL</h3>
         <h4 className="font-bold text-sm w-full text-center">Drag and drop files here</h4>
       </CardHeader>
@@ -45,10 +45,10 @@ export default function Mediapool({theme}:{theme : string}) {
       </div>
 
       <CardFooter className="gap-1">
-        <Button className={`w-full ${theme === "light"?"text-blue-500":"text-purple-600"} ${theme === "light"?"border-blue-500":"border-purple-600"}`} variant="bordered" radius="sm" onPress={open}>
+        <Button className={`w-full ${theme === "light"?"text-orange-500":"text-purple-600"} ${theme === "light"?"border-orange-500":"border-purple-600"}`} variant="bordered" radius="sm" onPress={open}>
           SELECT FILES
         </Button>
-        <Button variant="bordered" className={`w-24 ${theme === "light"?"text-orange-500":"text-rose-600"} ${theme === "light"?"border-orange-500":"border-rose-600"}`}  radius="sm" onPress={reset} >
+        <Button variant="bordered" className={`w-24 ${theme === "light"?"text-fuchsia-600":"text-rose-600"} ${theme === "light"?"border-fuchsia-600":"border-rose-600"}`}  radius="sm" onPress={reset} >
           CANCEL
         </Button>
       </CardFooter>
