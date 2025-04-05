@@ -44,7 +44,9 @@
 		"vscode": {
 			"extensions": [
 				"dbaeumer.vscode-eslint", // ESLint
-				"esbenp.prettier-vscode" // Prettier
+				"esbenp.prettier-vscode", // Prettier
+				"ms-vsliveshare.vsliveshare",//liveshare
+				"bradlc.vscode-tailwindcss"//tailwind
 			]
 		}
 	}

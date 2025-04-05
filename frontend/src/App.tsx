@@ -1,33 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Mediapool from "./feature/Mediapool"
+import Footer from "./feature/Footer"
+import Queue from "./feature/Queue"
+import {useTheme} from "@heroui/use-theme";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { theme, setTheme } = useTheme()
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="h-dvh flex flex-col">
+
+      <div className="p-3 gap-x-3 h-[calc(100%-76px)] w-dvh flex flex-row justify-between">
+
+        <Mediapool theme={theme}/>
+        <Queue theme={theme}/>
+
       </div>
-      <h1>MetaPaste GUI</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+
+      <div className="p-3 pt-0">
+        <Footer theme={theme} setTheme={setTheme}/>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+    </div>
+
     </>
   )
 }
