@@ -67,14 +67,14 @@ export default function Mediapool({theme}:{theme : string}) {
       </CardFooter>
       </Card>
 
-      
+
       {/* エディット部分 */}
       <Card className="flex-1 h-full pb-1.5 justify-end">
       <CardHeader className={`pb-0 pt-2 px-4 flex-col items-start ${theme === "light"?"text-orange-400":"text-purple-600"}`}>
         <h3 className="font-bold text-2xl w-full text-center">EDIT</h3>
       </CardHeader>
       <CardBody className="flex flex-col content-start justify- gap-3 flex-wrap overflow-hidden overflow-y-auto h-[calc(100dvh-236px)]">
-        
+
         {files.length > 0 ? (
         <Card className="w-full h-fit">
         <CardHeader className="pb-0 flex-col items-start">
@@ -104,8 +104,8 @@ export default function Mediapool({theme}:{theme : string}) {
           NEXT
         </Button>
         </div>
-      
-        
+
+
 
 
       </CardBody>
@@ -117,6 +117,6 @@ export default function Mediapool({theme}:{theme : string}) {
       </Card>
 
     </>
-    
+
   );
 }
