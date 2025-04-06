@@ -8,14 +8,16 @@ import { useState } from "react";
 function App() {
   const { theme, setTheme } = useTheme()
   const [files,setFiles]=useState<File[]>([])
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
   return (
     <>
     <div className="h-dvh flex flex-col">
 
       <div className="p-3 gap-x-3 h-[calc(100%-76px)] w-dvh flex flex-row justify-between">
 
-        <Mediapool theme={theme} files={files} setFiles={setFiles} />
-        <Edit theme={theme} files={files}/>
+        <Mediapool theme={theme} files={files} setFiles={setFiles} setCurrentIndex={setCurrentIndex}/>
+        <Edit theme={theme} files={files} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>
         <Queue theme={theme}/>
 
       </div>

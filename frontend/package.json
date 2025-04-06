@@ -12,6 +12,7 @@
   "dependencies": {
     "@heroui/react": "^2.7.5",
     "@heroui/use-theme": "^2.1.6",
+    "@uswriting/exiftool": "^1.0.3",
     "framer-motion": "^12.6.3",
     "lucide-react": "^0.487.0",
     "react": "^19.0.0",

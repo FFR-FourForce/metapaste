@@ -14,6 +14,9 @@ importers:
       '@heroui/use-theme':
         specifier: ^2.1.6
         version: 2.1.6(react@19.1.0)
+      '@uswriting/exiftool':
+        specifier: ^1.0.3
+        version: 1.0.3
       framer-motion:
         specifier: ^12.6.3
         version: 12.6.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -1686,6 +1689,9 @@ packages:
   '@typescript-eslint/visitor-keys@8.28.0':
     resolution: {integrity: sha512-hbn8SZ8w4u2pRwgQ1GlUrPKE+t2XvcCW5tTRF7j6SMYIuYG37XuzIW44JCZPa36evi0Oy2SnM664BlIaAuQcvg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@uswriting/exiftool@1.0.3':
+    resolution: {integrity: sha512-dw6LOo7GnG65I9fCCVbsensRaQrATvBhRhuFQsMl21JPB9CCJWrArD4/BaRQkftrjOXLVJ9qqp6/XSgcRKfnkQ==}
 
   '@vitejs/plugin-react-swc@3.8.1':
     resolution: {integrity: sha512-aEUPCckHDcFyxpwFm0AIkbtv6PpUp3xTb9wYGFjtABynXjCYKkWoxX0AOK9NT9XCrdk6mBBUOeHQS+RKdcNO1A==}
@@ -5064,6 +5070,8 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.28.0
       eslint-visitor-keys: 4.2.0
+
+  '@uswriting/exiftool@1.0.3': {}
 
   '@vitejs/plugin-react-swc@3.8.1(@swc/helpers@0.5.15)(vite@6.2.3(jiti@1.21.7)(yaml@2.7.1))':
     dependencies:
