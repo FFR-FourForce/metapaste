@@ -8,7 +8,7 @@ export default function Queue({theme}:{theme : string}){
       <CardHeader className={`pb-0 pt-2 px-4 flex-col items-start ${theme === "light"?"text-orange-400":"text-purple-600"}`}>
         <h3 className="font-bold text-2xl w-full text-center">QUEUE</h3>
       </CardHeader>
-      <CardBody className="flex flex-col content-start justify- gap-3 flex-wrap overflow-hidden overflow-y-auto h-[calc(100dvh-236px)]">
+      <CardBody className="flex flex-col content-start gap-3 flex-wrap overflow-hidden overflow-y-auto h-[calc(100dvh-236px)]">
 
         {/* メディア */}
         <Card className="w-full h-24 flex flex-row">
