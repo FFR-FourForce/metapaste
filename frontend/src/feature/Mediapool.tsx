@@ -56,7 +56,7 @@ export default function Mediapool({theme,files,setFiles,setCurrentIndex}:{theme 
           SELECT FILES
         </Button>
         <Button variant="bordered" className={`text-lg w-24 ${theme === "light"?"text-fuchsia-600":"text-rose-600"} ${theme === "light"?"border-fuchsia-600":"border-rose-600"}`}  radius="sm" onPress={reset} >
-          CANCEL
+          CLEAR
         </Button>
       </CardFooter>
       </Card>
