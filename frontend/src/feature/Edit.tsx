@@ -1,6 +1,22 @@
 import { useEffect, useState} from "react";
 import { Card, CardHeader, CardBody, CardFooter, Button } from "@heroui/react";
 import { parseMetadata } from "@uswriting/exiftool";
+import { createFFmpeg} from '@ffmpeg/ffmpeg';
+
+async function renderVideo(file:File){
+
+  const ffmpeg = createFFmpeg({ log: true });
+  await ffmpeg.load();
+
+  ffmpeg.FS('writeFile', 'input.mp4', file);
+
+  await ffmpeg.run('-i', 'input.mp4', '-vf', "drawtext=text='Hello World':fontcolor=white:fontsize=24:x=10:y=10", 'output.mp4');
+
+  const data=ffmpeg.FS('readFile', 'output.mp4')
+
+  return URL.createObjectURL(new Blob([data.buffer],{type:'video/mp4'}));
+
+}
 
 async function readMetadata(file:File){
   const result = await parseMetadata(file,{
@@ -92,7 +108,6 @@ return (
           </>
         )}
         </h4>
-
 
         </CardBody>
         </Card>

@@ -17,7 +17,7 @@ export default function Queue({theme}:{theme : string}){
 
           </CardBody>
           <CardHeader className="pb-0 flex-col items-start">
-            <h4 className="text-small w-full truncate">c1234.mp4</h4>
+            <h4 className="text-small w-full truncate">c1234example.mp4</h4>
           </CardHeader>
         </Card>
 
