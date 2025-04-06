@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { Card, CardHeader, CardBody, CardFooter, Button } from "@heroui/react";
 
 export default function Edit({ theme, files }: { theme: string, files: File[] }) {
@@ -9,6 +9,9 @@ export default function Edit({ theme, files }: { theme: string, files: File[] })
   const previousFile = () =>{
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? files.length - 1: prevIndex - 1))
   }
+  useEffect(() => {
+    setCurrentIndex(0)
+  }, [files]);
 
   return (
   <>
