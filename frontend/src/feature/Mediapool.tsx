@@ -25,20 +25,18 @@ export default function Mediapool({theme,files,setFiles}:{theme : string,files:F
       <CardBody className="flex flex-row content-start justify-evenly gap-3 flex-wrap overflow-hidden overflow-y-auto h-[calc(100dvh-236px)]">
 
         {/* メディア */}
-        {useMemo(()=>files.map(file => (
-          <>
-            <Card className="w-28 h-fit" key={file.name}>
-            <CardHeader className="pb-0 flex-col items-start">
-              <h4 className="text-small w-full truncate">{file.name}</h4>
-            </CardHeader>
-            <CardBody className="overflow-visible">
-              <video
-                className="object-cover rounded-md"
-                src={URL.createObjectURL(file)}
-              />
-            </CardBody>
-            </Card>
-          </>
+        {useMemo(()=>files.map((file,index) => (
+          <Card className="w-28 h-fit" key={index}>
+          <CardHeader className="pb-0 flex-col items-start">
+            <h4 className="text-small w-full truncate">{file.name}</h4>
+          </CardHeader>
+          <CardBody className="overflow-visible">
+            <video
+              className="object-cover rounded-md"
+              src={URL.createObjectURL(file)}
+            />
+          </CardBody>
+          </Card>
         )), [files])}
 
       </CardBody>
