@@ -6,7 +6,6 @@ export default function Mediapool({theme,files,setFiles}:{theme : string,files:F
 
   const onDrop = (acceptedFiles:File[]) => {
     setFiles([...files,...acceptedFiles])
-    setFileIndexZero() //インデックスが存在しない箇所を示さないように、ファイル読み込みのたびにカレントインデックスをリセットする
   }
   const reset = () =>{setFiles([])}
 
